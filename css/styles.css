@@ -77,9 +77,69 @@ header .desktop-nav {
     font-size: 1.2rem;
 }
 
+.hero {
+    width: 100%;
+    max-width: 1300px;
+    min-height: calc(100vh-4.5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 0.5rem;
+}
+
+.hero h1 {
+    color: #3b0270;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.hero p {
+    color: #6f00ff;
+    text-align: center;
+    width: 90%;
+    max-width: 35rem;
+    font-size: 1.2rem;
+}
+
+.hero-btn > a {
+    background-color: #3b0270;
+    color: white;
+    padding: 0.5rem 2rem;
+    text-decoration: none;font-size: 1rem;
+    border-radius: 15px;
+    transition: filter 0.5s ease-in;
+}
+
+.hero-btn > a:hover {
+    background-color: #6f00ff;
+    filter: brightness(90%);
+}
+
+@media (min-width: 320px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero p {
+        font-size: 1.3rem;
+    }
+
+    .hero {
+        min-height: 60vh;
+    }
+}
+
 @media (min-width: 1000px) {
     .mobile {
-        display: none;
+     display: none;
     }
 
     .mobile button {
