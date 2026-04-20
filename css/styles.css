@@ -8,7 +8,7 @@
 header {
     width: 100%;
     height: 4.5rem;
-    border-bottom: 1px solid rgba(0, 0, 0.3);
+    border-bottom: 1px solid rgba(161, 108,153);
     background-color: #fff1f1;
     position: sticky;
     top: 0;
@@ -67,8 +67,8 @@ header .desktop-nav {
     padding: 2rem 1rem;
     max-width: 10rem;
     height: calc(100vh-4.5rem);
-    border-left: 1px solid rgba(0, 0, 0.3);
-    border-bottom: 1px solid rgba(0, 0, 0.3);
+    border-left: 1px solid rgba(161, 108, 153);
+    border-bottom: 1px solid rgba(161, 108, 153);
     border-radius: 5px;
     display: none;
 }
@@ -115,7 +115,7 @@ header .desktop-nav {
 
 .hero-btn > a:hover {
     background-color: #6f00ff;
-    filter: brightness(90%);
+    filter: brightness(70%);
 }
 
 .about {
@@ -130,7 +130,8 @@ header .desktop-nav {
     font-size: 1.8rem;
     font-family: "Montserrat", sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     transition: all 0.2s ease-in-out;
 }
 
@@ -144,6 +145,8 @@ header .desktop-nav {
     max-width: 1180px;
     margin: 0 auto;
     display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
     gap: 1rem;
 }
 
@@ -159,6 +162,67 @@ header .desktop-nav {
     font-size: 1rem;
     line-height: 1.6rem;
 }
+
+.skills {
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skills h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #3b0270;
+    font-size: 1.8rem;
+    font-family: "Montserrat", sans-serif;
+    transition: all 02 ease-in-out;
+}
+
+.skills h2:hover {
+    transform: skew(10deg);
+    color: #E9B3FB;
+}
+
+.skills-container {
+    gap: 2rem;
+    padding: 0 1rem;
+    width: 60%;
+    max-width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 2rem;
+}
+
+.skills-container article {
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    border: 1px solid rgba(161, 108, 153);
+    border-radius: 10px;
+    background-color: #fff1f1;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.skills-container article:hover {
+    transform: scale(1.05);
+}
+
+.skills-container span {
+    font-size:  2.5rem;
+    color: #3b0270;
+}
+
+.skills-container p {
+    font-size: 1.6rem;
+    color: #3b0270;
+}
+
 
 @media (min-width: 320px) {
     .desktop-nav {
@@ -193,14 +257,19 @@ header .desktop-nav {
         display: flex;
         gap: 3rem;
     }
-
+    
     .about h2 {
         font-size: 2rem;
     }
 
     .about-container {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 100px;
+        grid-template-rows: auto;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
     }
 }
 
