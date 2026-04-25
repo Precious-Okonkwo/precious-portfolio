@@ -110,12 +110,12 @@ header .desktop-nav {
     padding: 0.5rem 2rem;
     text-decoration: none;font-size: 1rem;
     border-radius: 15px;
-    transition: filter 0.5s ease-in;
+    transition: filter 0.3s ease-in;
 }
 
 .hero-btn > a:hover {
-    background-color: #6f00ff;
-    filter: brightness(70%);
+    background-color: #E9B3FB;
+    filter: brightness(0.6);
 }
 
 .about {
@@ -155,6 +155,15 @@ header .desktop-nav {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.about-container article:nth-child(1):hover {
+    transform: scale(1.07);
+}
+
+.about img {
+    border-radius: 200px;
 }
 
 .about-container p {
@@ -186,7 +195,6 @@ header .desktop-nav {
 }
 
 .skills-container {
-    gap: 2rem;
     padding: 0 1rem;
     width: 60%;
     max-width: 1180px;
@@ -210,7 +218,7 @@ header .desktop-nav {
 }
 
 .skills-container article:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 .skills-container span {
@@ -223,6 +231,248 @@ header .desktop-nav {
     color: #3b0270;
 }
 
+.project {
+    margin: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+    z-index: 3;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(248, 243, 243, 0.5);
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.project h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #3b0270;
+    font-size: 1.8rem;
+    font-family: "Montserrat", sans-serif;
+    transition: all 02 ease-in-out;
+    z-index: 5;
+}
+
+.project h2:hover {
+    transform: skew(10deg);
+    color: #E9B3FB;
+}
+
+.project-container {
+    width: 60%;
+    max-width: 1180px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 2rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    z-index: 5;
+}
+
+.project-container article {
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: 1px solid rgba(161, 108, 153);
+    border-radius: 15px;
+    background-color: #fff1f1;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-container article:hover {
+    transform: scale(1.09);
+}
+
+.project-container p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #3b0270;
+}
+
+.project-container h3 {
+    font-size: 1.5rem;
+    color: #3b0270;
+}
+
+.project-container a {
+    background-color: #3b0270;
+    color: #fff1f1;
+    align-self: center;
+    padding: 0.5rem 2rem;
+    border-radius: 15px;
+    text-decoration: none;
+    animation: slide 2s ease-in-out infinite;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 4rem 0;
+    width: 100%;
+}
+
+.contact-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: #3b0270;
+}
+
+.contact-intro h2 {
+    font-size: 1.8rem;
+    font-family: "Montserrat", sans-serif;
+    transition: all 02 ease-in-out;
+}
+
+.contact-intro h2:hover {
+    transform: skew(10deg);
+    color: #E9B3FB;
+}
+
+.contact-intro p {
+    font-size: 1rem;
+    text-align: center;
+    width: 90%;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,auto);
+    gap: 1rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+    width: 60%;
+    max-width: 1180px;
+}
+
+.contact-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 90%;
+    max-width: 45rem;
+    padding: 2rem 1rem;
+    background-color: #3b0270;
+    border-radius: 15px;
+}
+
+.contact-content form label {
+    color: #fff1f1;
+    font-size: 0.9rem;
+}
+
+.first-last-email {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.first-last-email > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-content form input {
+    outline: 0;
+    height: 2.5rem;
+    padding: 0 0.5rem;
+    border: 1px solid rgba(161, 108,153);
+    border-radius: 5px;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.message textarea {
+    min-height: 7rem;
+    padding: 0.5rem;
+}
+
+.contact-content button {
+    background-color: #E9B3FB;
+    color: #3b0270;
+    border: 1px solid rgba(161, 108,153);
+    border-radius: 15px;
+    font-weight: 700;
+    padding: 0.9rem 3rem;
+    margin: 0.9rem 0;
+    align-self: flex-start;
+    cursor: pointer;
+    transition: filter 0.3 ease-in-out;
+}
+
+.contact-content button:hover {
+    filter: brightness(0.6);
+}
+
+.contact-content address {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 90%;
+    max-width: 45rem;
+    padding: 2rem 1rem;
+    margin: 6rem 0;
+}
+
+.address-email {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    color:#3b0270;
+}
+
+.address-link {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.address-link a {
+    text-decoration: none;
+}
+
+.address-link a:nth-child(2) {
+    color: black;
+}
+
+footer {
+    background-color: rgb(2, 2, 2);
+    color: #fff1f1;
+    padding: 5rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translatex(20px);
+    }
+}
 
 @media (min-width: 320px) {
     .desktop-nav {
@@ -269,6 +519,16 @@ header .desktop-nav {
 
     .skills-container {
         grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .contact-content {
+        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
     }
 }
