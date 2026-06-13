@@ -484,11 +484,15 @@ footer {
     }
 
     .project-container {
-        margin: 0 2rem;
+        margin: 0 1rem;
     }
 
     .about-container {
         margin: 0 2rem;
+    }
+
+    .contact-content {
+        margin: 0 4rem;
     }
 }
 
@@ -499,14 +503,6 @@ footer {
 
     .hero {
         min-height: 60vh;
-    }
-
-    .about-container {
-        margin: 0 auto;
-    }
-
-    .project-container {
-        margin: 0 auto;
     }
 }
 
