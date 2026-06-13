@@ -142,7 +142,7 @@ header .desktop-nav {
 }
 
 .about-container {
-    width: 60%;
+    width: 70%;
     max-width: 1180px;
     margin: 0 auto;
     display: grid;
@@ -271,14 +271,13 @@ header .desktop-nav {
 }
 
 .project-container {
-    width: 60%;
+    width: 70%;
     max-width: 1180px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     gap: 2rem;
     margin: 0 auto;
-    padding: 0 1rem;
     z-index: 5;
 }
 
@@ -483,6 +482,14 @@ footer {
     .mobile {
         display: flex;
     }
+
+    .project-container {
+        margin: 0 2rem;
+    }
+
+    .about-container {
+        margin: 0 2rem;
+    }
 }
 
 @media (min-width: 768px) {
@@ -492,6 +499,14 @@ footer {
 
     .hero {
         min-height: 60vh;
+    }
+
+    .about-container {
+        margin: 0 auto;
+    }
+
+    .project-container {
+        margin: 0 auto;
     }
 }
 
